@@ -15,7 +15,7 @@ System should be designed considering the following:
 3.   How would you design a garbage collection system? The idea here is to design a system that recycles unused memory in the program. Here the key is to find which piece of memory is unused. What data structure would be chosen and how would it be used to ensure garbage collection does not halt the main process?
 
 Using Graph data structure & Mark and Sweep algorithm. Below are the operations performed:
-- get(Object) : Creates a new Object to the graph - release(Object) : To indicate that unused object - garbageCollector() : initializes the garbage collection 
-- initializeGC identifies unused references and enqueue it to finalize queue. Finalize method will be called to process objects and push it to finalize queue. objRef refers the  node of graph.
-- Use cases covered: avoiding cyclic references during traversal. works for both objects with or without finalize method. non blocking implementation of finalize.
+get(Object) : Creates a new Object to the graph - release(Object) : To indicate that unused object - garbageCollector() : initializes the garbage collection 
+initializeGC identifies unused references and enqueue it to finalize queue. Finalize method will be called to process objects and push it to finalize queue. objRef refers the  node of graph.
+Use cases covered: avoiding cyclic references during traversal. works for both objects with or without finalize method. non blocking implementation of finalize.
 
